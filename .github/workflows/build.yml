@@ -59,7 +59,7 @@ jobs:
             .github/workflows/build.yml
       -
         name: 🐿 Setup Golang
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         if: env.GIT_DIFF
         with:
           go-version: ${{env.GO_VERSION}}
