@@ -49,7 +49,7 @@ jobs:
         if: env.GIT_DIFF
 
       - name: 'Upload optimized contract artifact'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.contract.name }}
           path: ${{ matrix.contract.workdir }}${{ matrix.contract.build }}
@@ -57,7 +57,7 @@ jobs:
         if: env.GIT_DIFF
 
       - name: 'Upload Cargo.lock artifact'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Cargo.lock
           path: ${{ matrix.contract.workdir }}Cargo.lock
